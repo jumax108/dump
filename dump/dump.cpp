@@ -1,5 +1,24 @@
 #include "headers\dump.h"
 
+long CDump::_dumpCnt;
+
+CDump::CDump(){
+
+	_dumpCnt = 0;
+
+	_invalid_parameter_handler oldHandler, newHandler;
+	newHandler = myInvalidParameterHandler;
+
+	oldHandler = _set_invalid_parameter_handler(newHandler);
+	
+	_CrtSetReportHook(customReportHook);
+
+	_set_purecall_handler(myPureCallHandler);
+
+	setHandlerDump();
+
+}
+
 void CDump::crash(){
 	int *ptr = nullptr;
 	*ptr = 0;

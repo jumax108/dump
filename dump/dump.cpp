@@ -10,6 +10,10 @@ CDump::CDump(){
 	newHandler = myInvalidParameterHandler;
 
 	oldHandler = _set_invalid_parameter_handler(newHandler);
+
+	_CrtSetReportMode(_CRT_WARN, 0);
+	_CrtSetReportMode(_CRT_ASSERT, 0);
+	_CrtSetReportMode(_CRT_ERROR, 0);
 	
 	_CrtSetReportHook(customReportHook);
 

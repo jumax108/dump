@@ -1,4 +1,4 @@
-#include "headers\dump.h"
+#include "..\headers\dump.h"
 
 long CDump::_dumpCnt;
 

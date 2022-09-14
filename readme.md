@@ -2,7 +2,7 @@
 간단하게 덤프 남기기 위한 클래스
 
 ## 사용법
-```
+```cpp
 CDump dump;
 
 int main(){

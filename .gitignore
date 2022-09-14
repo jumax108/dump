@@ -2,3 +2,4 @@
 /MSVC/.vs
 *.bat
 /MSVC/release
+/MSVC/debug
